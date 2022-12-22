@@ -1,0 +1,58 @@
+XTerm*saveLines: 10000
+
+Xft.dpi: 120
+
+urxvt.font: xft:Fira Code Semibold:size=10,weight=800
+urxvt.depth: 32
+urxvt.scrollBar: false
+urxvt.secondaryScreen: 1
+urxvt.secondaryScroll: 0
+urxvt.letterSpace: 0
+
+urxvt.perl-ext-common: default,matcher,-confirm-paste
+urxvt.url-launcher: /usr/bin/chromium
+urxvt.match.button: 1
+
+*cursorBlink: true
+
+! hard contrast: *background: #1d2021
+*background: #282828
+urxvt.background: #282828
+! soft contrast: *background: #32302f
+*foreground: #ebdbb2
+! Black + DarkGrey
+*color0:  #282828
+*color8:  #928374
+! DarkRed + Red
+*color1:  #cc241d
+*color9:  #fb4934
+! DarkGreen + Green
+*color2:  #98971a
+*color10: #b8bb26
+! DarkYellow :+ Yellow
+*color3:  #d79921
+*color11: #fabd2f
+! DarkBlue + Blue
+*color4:  #458588
+*color12: #83a598
+! DarkMagenta + Magenta
+*color5:  #b16286
+*color13: #d3869b
+! DarkCyan + Cyan
+*color6:  #689d6a
+*color14: #8ec07c
+! LightGrey + White
+*color7:  #a89984
+*color15: #ebdbb2
+
+urxvt.colorIT:	#ff5959
+urxvt.colorBD:	#eaa835
+urxvt.colorUL:	#f55cf8
+
+Xcursor.theme: xcursor-vanilla-dmz
+Xcursor.size: 16
+
+
+
+!! vim: set ft=xdefaults:
+

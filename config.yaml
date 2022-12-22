@@ -1,0 +1,44 @@
+config:
+  backup: true
+  create: true
+  dotpath: dotfiles
+dotfiles:
+  d_nvim:
+    src: config/nvim
+    dst: ~/.config/nvim
+  f_zshrc:
+    src: zshrc
+    dst: ~/.zshrc
+  f_xresources:
+    src: Xresources
+    dst: ~/.Xresources
+  f_xinitrc:
+    src: xinitrc
+    dst: ~/.xinitrc
+  d_sxhkd:
+    src: config/sxhkd
+    dst: ~/.config/sxhkd
+  d_bspwm:
+    src: config/bspwm
+    dst: ~/.config/bspwm
+  d_polybar:
+    src: config/polybar
+    dst: ~/.config/polybar
+  f_redshift.conf:
+    src: config/redshift.conf
+    dst: ~/.config/redshift.conf
+  d_picom:
+    src: config/picom
+    dst: ~/.config/picom
+profiles:
+  mzr:
+    dotfiles:
+    - d_nvim
+    - f_zshrc
+    - f_xresources
+    - f_xinitrc
+    - d_sxhkd
+    - d_bspwm
+    - d_polybar
+    - f_redshift.conf
+    - d_picom
