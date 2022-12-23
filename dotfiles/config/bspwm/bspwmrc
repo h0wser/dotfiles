@@ -16,3 +16,4 @@ polybar main &
 polybar side &
 redshift &
 picom &
+aw-qt &
