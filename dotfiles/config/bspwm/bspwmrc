@@ -2,8 +2,12 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
+{%@@ if profile=="mzr" @@%}
 bspc monitor HDMI-0 -d I II III IV V
 bspc monitor DP-0 -d  VI VII VIII IX X
+{%@@ elif profile=="brynolf" @@%}
+bspc monitor -d I II III IV V VI VII VIII IX X
+{%@@ endif @@%}
 
 bspc config border_width         2
 bspc config window_gap           16
@@ -13,7 +17,11 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 polybar main &
+
+picom &
+
+{%@@ if profile=="mzr" @@%}
+aw-qt 
 polybar side &
 redshift &
-picom &
-aw-qt &
+{%@@ endif @@%}
