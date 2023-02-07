@@ -30,6 +30,10 @@ dotfiles:
   d_picom:
     src: config/picom
     dst: ~/.config/picom
+  f_lockscreen.sh:
+    src: scripts/lockscreen.sh
+    dst: ~/scripts/lockscreen.sh
+    chmod: '755'
 profiles:
   mzr:
     dotfiles:
@@ -42,6 +46,7 @@ profiles:
     - d_polybar
     - f_redshift.conf
     - d_picom
+    - f_lockscreen.sh
   brynolf:
     dotfiles:
     - d_nvim
@@ -52,3 +57,4 @@ profiles:
     - d_bspwm
     - d_polybar
     - d_picom
+    - f_lockscreen.sh
