@@ -7,6 +7,8 @@ bspc monitor HDMI-0 -d I II III IV V
 bspc monitor DP-0 -d  VI VII VIII IX X
 {%@@ elif profile=="brynolf" @@%}
 bspc monitor -d I II III IV V VI VII VIII IX X
+{%@@ elif profile=="gammelburken" @@%}
+bspc monitor -d I II III IV V VI VII VIII IX X
 {%@@ endif @@%}
 
 bspc config border_width         2
