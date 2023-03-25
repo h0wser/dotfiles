@@ -43,6 +43,9 @@ dotfiles:
   d_lua:
     src: config/nvim/lua
     dst: ~/.config/nvim/lua
+  f_wezterm.lua:
+    src: config/wezterm/wezterm.lua
+    dst: ~/.config/wezterm/wezterm.lua
 profiles:
   mzr:
     dotfiles:
@@ -81,3 +84,4 @@ profiles:
     - f_lockscreen.sh
     - f_fonts.conf
     - f_init.lua
+    - f_wezterm.lua
