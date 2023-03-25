@@ -1,7 +1,9 @@
 require('plugins').setup()
 require('config.keymaps')
+require('config.lualine').setup()
 
 -- load snippets & completion
+
 require('luasnip.loaders.from_vscode').lazy_load()
 vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
 
@@ -23,7 +25,8 @@ cmp.setup({
 		{name = 'luasnip', keyword_length = 2},
 	},
 	window = {
-		documentation = cmp.config.window.bordered()
+		documentation = cmp.config.window.bordered(),
+		completion = cmp.config.window.bordered()
 	},
 	formatting = {
 		fields = {'menu', 'abbr', 'kind'},

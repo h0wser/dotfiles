@@ -34,6 +34,15 @@ dotfiles:
     src: scripts/lockscreen.sh
     dst: ~/scripts/lockscreen.sh
     chmod: '755'
+  f_fonts.conf:
+    src: config/fontconfig/fonts.conf
+    dst: ~/.config/fontconfig/fonts.conf
+  f_init.lua:
+    src: config/nvim/init.lua
+    dst: ~/.config/nvim/init.lua
+  d_lua:
+    src: config/nvim/lua
+    dst: ~/.config/nvim/lua
 profiles:
   mzr:
     dotfiles:
@@ -47,6 +56,7 @@ profiles:
     - f_redshift.conf
     - d_picom
     - f_lockscreen.sh
+    - f_fonts.conf
   brynolf:
     dotfiles:
     - d_nvim
@@ -69,3 +79,5 @@ profiles:
     - d_polybar
     - d_picom
     - f_lockscreen.sh
+    - f_fonts.conf
+    - f_init.lua

@@ -7,27 +7,29 @@ function M.setup()
 	}
 
 	local function plugins(use)
+		-- Package management stuff
 		use 'wbthomason/packer.nvim'
+
+		-- Random editing stuff
 		use 'jiangmiao/auto-pairs'
 		use 'Yggdroot/indentLine'
-		use 'leafOfTree/vim-svelte-plugin'
-		use 'maxmellon/vim-jsx-pretty'
 		use 'Vimjas/vim-python-pep8-indent'
+
+		-- Colors
 		use 'jeffkreeftmeijer/vim-dim'
 		use 'chriskempson/base16-vim'
 		use 'morhetz/gruvbox'
 
+		-- LSP Config
+		use "williamboman/mason.nvim"
+		use "williamboman/mason-lspconfig.nvim"
+
 		use {
 			"neovim/nvim-lspconfig",
-			opt = true,
 			event = "BufReadPre",
-			wants = { "nvim-lsp-installer" },
-			config = function() 
+			config = function()
 				require("config.lsp").setup()
-			end,
-			requires = {
-				"williamboman/nvim-lsp-installer"
-			},
+			end
 		}
 
 		use {
@@ -45,6 +47,12 @@ function M.setup()
 		use 'L3MON4D3/LuaSnip'
 		use 'saadparwaiz1/cmp_luasnip'
 		use 'rafamadriz/friendly-snippets'
+
+		-- Statusline
+		use {
+			'nvim-lualine/lualine.nvim',
+			requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+		}
 	end
 
 	vim.cmd "autocmd BufWritePost plugins.lua source <afile> | PackerCompile"

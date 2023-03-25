@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	urxvt
+	wezterm
 
 # program launcher
 super + @space

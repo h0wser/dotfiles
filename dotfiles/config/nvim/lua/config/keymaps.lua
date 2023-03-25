@@ -10,5 +10,3 @@ function map(mode, lhs, rhs, opts)
 end
 
 map('i', '<S-Tab>', '<C-D>')
-
-
