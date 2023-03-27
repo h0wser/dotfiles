@@ -9,7 +9,7 @@ if wezterm.config_builder then
 end
 
 config.color_scheme = 'Gruvbox dark, medium (base16)'
-config.font = wezterm.font('Noto Sans Mono')
+config.font = wezterm.font('CaskaydiaCove Nerd Font Mono')
 config.freetype_load_target = "Light"
 config.freetype_load_flags = 'FORCE_AUTOHINT'
 config.font_size = 11
