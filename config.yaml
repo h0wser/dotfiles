@@ -60,6 +60,7 @@ profiles:
     - d_picom
     - f_lockscreen.sh
     - f_fonts.conf
+    - f_wezterm.lua
   brynolf:
     dotfiles:
     - d_nvim

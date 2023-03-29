@@ -1,4 +1,3 @@
-local utils = require("utils")
 local M = {}
 
 vim.api.nvim_create_autocmd('LspAttach', {
@@ -9,19 +8,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
 		require("config.lsp.keymaps").setup(client, args.buf)
 	end
 })
-local function on_attach(client, bufnr)
-	-- use LSP as handler for formatexpr
-	vim.api.nvim_buf_set_option(0, "formatexpr", "v:lua.vim.lsp.formatexpr()")
-
-	utils.log("RANG UTILS THING")
-	require("config.lsp.keymaps").setup(client, bufnr)
-end
-
-local opts = {
-	flags = {
-		debounce_text_changes = 150,
-	},
-}
 
 function M.setup()
 	require("mason").setup()
@@ -45,6 +31,18 @@ function M.setup()
 	lspconfig.pyright.setup({})
 	lspconfig.lua_ls.setup({})
 	lspconfig.jsonls.setup({})
+
+	local signs = { Error = "", Warn = "", Hint = "", Info = "" }
+	for type, icon in pairs(signs) do
+		local hl = "DiagnosticSign" .. type
+		vim.fn.sign_define(hl, { text = icon, texthl= hl, numhl = hl })
+	end
+
+	vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+		vim.lsp.diagnostic.on_publish_diagnostics, {
+			signs = true
+		}
+	)
 end
 
 return M
