@@ -19,6 +19,7 @@ function M.setup()
 		use 'jeffkreeftmeijer/vim-dim'
 		use 'chriskempson/base16-vim'
 		use 'morhetz/gruvbox'
+		use 'sainnhe/everforest'
 
 		-- LSP Config
 		use "williamboman/mason.nvim"

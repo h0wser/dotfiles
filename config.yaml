@@ -46,6 +46,12 @@ dotfiles:
   f_wezterm.lua:
     src: config/wezterm/wezterm.lua
     dst: ~/.config/wezterm/wezterm.lua
+  f_plugins.lua:
+    src: config/nvim/lua/plugins.lua
+    dst: ~/.config/nvim/lua/plugins.lua
+  f_lualine.lua:
+    src: config/nvim/lua/config/lualine.lua
+    dst: ~/.config/nvim/lua/config/lualine.lua
 profiles:
   mzr:
     dotfiles:
@@ -61,6 +67,9 @@ profiles:
     - f_lockscreen.sh
     - f_fonts.conf
     - f_wezterm.lua
+    - f_plugins.lua
+    - f_lualine.lua
+    - f_init.lua
   brynolf:
     dotfiles:
     - d_nvim

@@ -65,11 +65,14 @@ vim.diagnostic.config({signs=false, virtual_text=false})
 vim.cmd([[
 " ==== Colors ====
 
-set background=dark
 set t_Co=256
 set termguicolors
 let g:gruvbox_italic = 1
-colorscheme gruvbox
+set background=dark
+
+let g:everforest_background = 'soft'
+let g:everforest_enable_italic = 1
+colorscheme everforest
 
 " ==== indentLine ====
 let g:indentLine_fileTypeExclude = ['json']

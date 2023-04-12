@@ -7,7 +7,7 @@ function M.setup()
 			component_separators = { left = '', right = ''},
 			section_separators = { left = '', right = ''},
 			ignore_focus = {},
-			theme = 'gruvbox'
+			theme = 'everforest'
 		},
 		sections = {
 			lualine_a = {'mode'},
