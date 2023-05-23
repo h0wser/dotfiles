@@ -15,5 +15,8 @@ config.font = wezterm.font('MesloLGS Nerd Font Mono')
 --config.freetype_load_flags = 'FORCE_AUTOHINT'
 config.font_size = 11
 config.enable_tab_bar = false
+config.default_cursor_style = "BlinkingBlock"
+config.animation_fps = 75
+config.force_reverse_video_cursor=true
 
 return config
