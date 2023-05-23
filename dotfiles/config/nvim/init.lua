@@ -101,6 +101,8 @@ set softtabstop=4
 set shiftwidth=4
 set textwidth=0
 
+set cursorline
+
 set scrolloff=10
 
 autocmd FileType javascript,javascriptreact setlocal ts=2 sts=2 sw=2 expandtab
